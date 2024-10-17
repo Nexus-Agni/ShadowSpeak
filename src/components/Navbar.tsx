@@ -44,7 +44,7 @@ function Navbar() {
                         <span className="mr-4 text-gray-400">Welcome {user?.username || user?.email}</span>
                         <Button
                             onClick={() => signOut()}
-                            className="w-full md:w-auto bg-orange-600 hover:bg-orange-500 text-white border-orange-700"
+                            className="w-full md:w-auto transition-all ease-in-out hover:scale-110  text-white border-white bg-black"
                             variant="outline"
                         >
                             Logout

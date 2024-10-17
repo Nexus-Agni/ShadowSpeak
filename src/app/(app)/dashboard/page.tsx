@@ -113,7 +113,7 @@ function Dashboard() {
   const { username } = session.user
 
   // URL making
-  const baseUrl = `${window.location.protocol}//${window.location.hostname}`;
+  const baseUrl = `${window.location.protocol}//${window.location.hostname}:${window.location.port}`;
   const profileUrl = `${baseUrl}/u/${username}`;
 
   // Copy to clipboard feature

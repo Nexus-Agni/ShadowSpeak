@@ -18,7 +18,7 @@ interface RootLayoutProps {
 
 export default async function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="en" >
+    <html lang="en" className='bg-black' >
       <AuthProvider>
         <body className={inter.className}>
           <Navbar />

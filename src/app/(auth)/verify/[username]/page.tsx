@@ -15,7 +15,7 @@ import * as z from 'zod';
 export default function VerifyCode() {
     const router = useRouter();
     const params = useParams<{username: string}>();
-    const {toast} = useToast();
+    const {toast} = useToast(); 
     const form = useForm<z.infer<typeof verifySchema>>({
         resolver : zodResolver(verifySchema)
     });
