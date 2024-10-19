@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# ShadowSpeak
 
-First, run the development server:
+ShadowSpeak is an anonymous feedback platform built with Next.js, Node.js, MongoDB, and additional services such as Vercel AI SDK, Resend for email handling, and NextAuth for authentication.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Project Overview
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+ShadowSpeak allows users to send and receive anonymous messages, including suggested messages powered by AI, and offers a secure authentication process with JWT tokens. Key features include:
+- Secure login and registration using NextAuth and JWT token handling.
+- Anonymous message sending and receiving.
+- Message suggestion system powered by the Vercel AI SDK.
+- Email notifications and verification using Resend.
+- Form validation using Zod for schema validation.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Flowchart
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+To better understand the architecture and flow of the backend, please refer to the detailed flowchart below:
 
-## Learn More
+[View on Eraser![](https://app.eraser.io/workspace/x6DmTJScVPDfWTSac1yH/preview?elements=EP1HK-bvDGdBnTX2Xw2Wug&type=embed)](https://app.eraser.io/workspace/x6DmTJScVPDfWTSac1yH?elements=EP1HK-bvDGdBnTX2Xw2Wug)
 
-To learn more about Next.js, take a look at the following resources:
+## Installation
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+To set up the project locally, please follow the steps below.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Nexus-Agni/ShadowSpeak
+   cd shadowspeak
+   ```
 
-## Deploy on Vercel
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3. Set up environment variables:
+   Create a `.env.local` file in the root of the project with the following variables:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+   ```bash
+   GOOGLE_API_KEY=<Your API URL>
+   NEXTAUTH_URL=<Your NextAuth URL>
+   RESEND_API_KEY=<Your Resend API Key>
+   MONGODB_URI=<Your MongoDB URI>
+   SECRET_KEY=<Your JWT Secret>
+   ```
+
+4. Run the development server:
+   ```bash
+   npm run dev
+   ```
+
+5. Open the app:
+   Open [http://localhost:3000](http://localhost:3000) in your browser to see the application.
+
+## Usage
+
+- After installation, you can access the sign-up and login pages for user registration.
+- The public profile link will allow others to send anonymous messages.
+- Suggested messages can be fetched via the "Suggest Messages" button, powered by the Vercel AI SDK.
+- User authentication is handled by NextAuth, and cookies are securely managed.
+- Email notifications and verification are handled by Resend.
+
+## License
+
+This project is licensed under the MIT License.
