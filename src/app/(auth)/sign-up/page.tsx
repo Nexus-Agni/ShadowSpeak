@@ -268,7 +268,7 @@ function SignUpForm() {
                       </div>
                       <div className="flex items-center gap-2 mt-2">
                         <AlertCircle className="w-4 h-4 text-blue-400" />
-                        <p className="text-sm text-blue-400">We'll send you a verification code</p>
+                        <p className="text-sm text-blue-400">We will send you a verification code</p>
                       </div>
                       <FormMessage className="text-red-400" />
                     </FormItem>

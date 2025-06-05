@@ -204,7 +204,7 @@ export default function VerifyCode() {
                 </span>
               </h1>
 
-              <p className="text-gray-400 text-lg mb-2">We've sent a 6-digit code to your email</p>
+              <p className="text-gray-400 text-lg mb-2">We have sent a 6-digit code to your email</p>
               <p className="text-orange-400 font-medium">@{params.username}</p>
             </div>
 
@@ -285,7 +285,7 @@ export default function VerifyCode() {
               </div>
               <div className="relative flex justify-center text-sm">
                 <span className="px-4 bg-gradient-to-r from-gray-900/80 to-black/80 text-gray-400">
-                  Didn't receive the code?
+                  Didn not receive the code?
                 </span>
               </div>
             </div>

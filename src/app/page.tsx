@@ -364,7 +364,7 @@ export default function LandingPage() {
                   </div>
 
                   <blockquote className="text-gray-300 text-lg mb-6 leading-relaxed group-hover:text-white transition-colors duration-300">
-                    "{testimonial.text}"
+                    &quot;{testimonial.text}&quot;
                   </blockquote>
 
                   <div className="flex items-center gap-4">
