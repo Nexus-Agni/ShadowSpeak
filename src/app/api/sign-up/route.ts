@@ -43,6 +43,8 @@ export async function POST (request : Request) {
                 const expiryDate = new Date();
                 expiryDate.setHours(expiryDate.getHours() + 1);
                 existingUserByEmail.verifyCodeExpiry = expiryDate;
+
+                await existingUserByEmail.save();
             }
         } else {
             const hashedPassword = await bcrypt.hash(password, 10)
@@ -69,6 +71,8 @@ export async function POST (request : Request) {
             username,
             verifyCode
         )
+
+
 
         if (!(await emailResponse).success) {
             return Response.json({
